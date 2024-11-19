@@ -4,13 +4,79 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>StrictlyBased - Coming Soon</title>
-    <link rel="stylesheet" href="styles.css" />
-    <!-- Link to Expo-Stencil font -->
-    <link rel="stylesheet" href="https://www.dafont.com/stencil-export.font" />
+    <style>
+      @font-face {
+        font-family: "Expo-Stencil";
+        src: url("fonts/Expo-Stencil.woff2") format("woff2"),
+          url("fonts/Expo-Stencil.woff") format("woff");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #121212; /* Background color from the app's palette */
+        font-family: "Expo-Stencil", sans-serif;
+        color: #f4f4f4; /* Text color from the app's palette */
+      }
+
+      .container {
+        text-align: center;
+      }
+
+      .logo {
+        width: 200px;
+        height: auto;
+        margin-bottom: 20px;
+      }
+
+      .coming-soon {
+        font-size: 48px;
+        margin-bottom: 20px;
+      }
+
+      .email-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+      }
+
+      .email-form input[type="email"] {
+        padding: 10px;
+        font-size: 16px;
+        border: 2px solid #f4f4f4;
+        border-radius: 5px 0 0 5px;
+        outline: none;
+        color: #121212;
+        background-color: #f4f4f4;
+      }
+
+      .email-form button {
+        padding: 10px 20px;
+        font-size: 16px;
+        border: 2px solid #f4f4f4;
+        border-left: none;
+        border-radius: 0 5px 5px 0;
+        background-color: #f4f4f4;
+        color: #121212;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .email-form button:hover {
+        background-color: #e0e0e0;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
-      <img src="based-logo.png" alt="Based Logo" class="logo" />
+      <img src="based_logo.png" alt="Based Logo" class="logo" />
       <h1 class="coming-soon">COMING SOON</h1>
       <form class="email-form">
         <input type="email" placeholder="Enter your email" required />
