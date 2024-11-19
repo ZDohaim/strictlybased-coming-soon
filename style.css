@@ -1,0 +1,64 @@
+@font-face {
+  font-family: "Expo-Stencil";
+  src: url("fonts/Expo-Stencil.woff2") format("woff2"),
+    url("fonts/Expo-Stencil.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #121212; /* Background color from the app's palette */
+  font-family: "Expo-Stencil", sans-serif;
+}
+
+.container {
+  text-align: center;
+  color: #f4f4f4; /* Text color from the app's palette */
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.coming-soon {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.email-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.email-form input[type="email"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #f4f4f4;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #121212;
+}
+
+.email-form button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 2px solid #f4f4f4;
+  border-left: none;
+  border-radius: 0 5px 5px 0;
+  background-color: #f4f4f4;
+  color: #121212;
+  cursor: pointer;
+}
+
+.email-form button:hover {
+  background-color: #e0e0e0;
+}
