@@ -6,9 +6,9 @@
     <title>StrictlyBased - Coming Soon</title>
     <style>
       @font-face {
-        font-family: "Expo-Stencil";
-        src: url("fonts/Expo-Stencil.woff2") format("woff2"),
-          url("fonts/Expo-Stencil.woff") format("woff");
+        font-family: "Export-Stencil";
+        src: url("fonts/Export-Stencil.woff2") format("woff2"),
+          url("fonts/stenc_ex.woff") format("woff");
         font-weight: normal;
         font-style: normal;
       }
@@ -16,17 +16,56 @@
       body {
         margin: 0;
         padding: 0;
+        font-family: poppins;
+        background-color: #121212;
+        color: #f4f4f4;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .navbar {
+        background-color: #2c2d30;
+        padding: 10px 20px;
+        width: 100%;
         display: flex;
         justify-content: center;
+      }
+
+      .navbar-content {
+        display: flex;
+        justify-content: space-between;
         align-items: center;
-        height: 100vh;
-        background-color: #121212; /* Background color from the app's palette */
-        font-family: "Expo-Stencil", sans-serif;
-        color: #f4f4f4; /* Text color from the app's palette */
+        width: 100%;
+        max-width: 1200px;
+      }
+
+      .navbar a {
+        color: #f4f4f4;
+        text-decoration: none;
+        font-size: 18px;
+        margin: 0 15px;
+      }
+
+      .social-icons {
+        display: flex;
+        align-items: center;
+      }
+
+      .social-icons a {
+        margin-left: 15px;
       }
 
       .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
         text-align: center;
+        width: 100%;
+        max-width: 600px;
+        padding: 0 20px;
       }
 
       .logo {
@@ -38,50 +77,130 @@
       .coming-soon {
         font-size: 48px;
         margin-bottom: 20px;
+        font-family: poppins;
       }
 
-      .email-form {
+      .contact-form {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
-        margin-top: 20px;
+        width: 100%;
+        max-width: 400px;
       }
 
-      .email-form input[type="email"] {
+      .contact-form label {
+        margin-bottom: 10px;
+        font-size: 18px;
+        width: 100%;
+      }
+
+      .contact-form input[type="email"] {
         padding: 10px;
         font-size: 16px;
         border: 2px solid #f4f4f4;
-        border-radius: 5px 0 0 5px;
+        border-radius: 5px;
         outline: none;
         color: #121212;
         background-color: #f4f4f4;
+        margin-bottom: 10px;
+        width: 100%;
+        box-sizing: border-box;
       }
 
-      .email-form button {
+      .contact-form button {
         padding: 10px 20px;
         font-size: 16px;
         border: 2px solid #f4f4f4;
-        border-left: none;
-        border-radius: 0 5px 5px 0;
+        border-radius: 5px;
         background-color: #f4f4f4;
         color: #121212;
         cursor: pointer;
         transition: background-color 0.3s;
+        width: 100%;
       }
 
-      .email-form button:hover {
+      .contact-form button:hover {
         background-color: #e0e0e0;
+      }
+
+      .about-section {
+        padding: 50px 20px;
+        background-color: #1e1e1e;
+        color: #f4f4f4;
+        text-align: center;
+        width: 100%;
+      }
+
+      .about-section h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+
+      .about-section p {
+        font-size: 18px;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .email {
+        color: #f4f4f4;
+        font-size: 18px;
+        font-family: poppins;
       }
     </style>
   </head>
   <body>
+    <div class="navbar">
+      <div class="navbar-content">
+        <a href="#about">About Us</a>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/strictlybased" target="_blank">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-instagram"
+            >
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
     <div class="container">
       <img src="based_logo.png" alt="Based Logo" class="logo" />
       <h1 class="coming-soon">COMING SOON</h1>
-      <form class="email-form">
-        <input type="email" placeholder="Enter your email" required />
-        <button type="submit">Notify Me</button>
+      <form
+        class="contact-form"
+        action="https://formspree.io/f/mrbglayr"
+        method="POST"
+      >
+        <label class="email">
+          Enter Your Email to Stay Updated:
+          <input
+            type="email"
+            name="email"
+            required
+            placeholder="example@email.com"
+          />
+        </label>
+        <button type="submit">Send</button>
       </form>
+    </div>
+    <div id="about" class="about-section">
+      <h2>About StrictlyBased</h2>
+      <p>
+        StrictlyBased is dedicated to providing the best products and services
+        to our customers. Stay tuned for our official launch!
+      </p>
     </div>
   </body>
 </html>
